@@ -6,7 +6,7 @@ pipeline {
             timeout(time: 1, unit: 'HOURS')
             timestamps()
      }
-     triggers { upstream(upstreamProjects: 'devops13-pipeline/basic-piepline', threshold: hudson.model.Result.SUCCESS) }
+     triggers { upstream(upstreamProjects: 'basic-piepline', threshold: hudson.model.Result.SUCCESS) }
     stages {
         
         stage('build'){
