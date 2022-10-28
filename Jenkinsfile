@@ -4,9 +4,9 @@ pipeline {
     options {
             buildDiscarder(logRotator(numToKeepStr: '5'))
             timeout(time: 1, unit: 'HOURS')
-            timestamps()
+            timestamps()devops13-pipeline
      }
-     triggers { upstream(upstreamProjects: 'basic-pipeline-test', threshold: hudson.model.Result.SUCCESS) }
+     triggers { upstream(upstreamProjects: 'devops13-pipeline/basic-pipeline', threshold: hudson.model.Result.SUCCESS) }
     stages {
         
         stage('build'){
