@@ -12,7 +12,7 @@ pipeline {
         }
         stage('git integration'){
             steps {
-               git branch: 'main', credentialsId: 'jenkins-key', url: 'git@github.com:nizamabad/devops13-maven.git'
+               git branch: 'main', credentialsId: 'jenkins-key', url: 'git@github.com:rajunalla101/mymaven-project.git'
             }
         }
         stage('maven build'){
